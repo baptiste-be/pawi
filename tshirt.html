@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAWI® - T-Shirt</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#000;color:#fff}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#000;
+border-bottom:1px solid #111;
+}
+
+nav img{height:28px;cursor:pointer}
+nav ul{display:flex;gap:20px;list-style:none}
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:12px;
+letter-spacing:2px;
+opacity:.7;
+}
+nav a:hover{opacity:1}
+
+.product{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:25px;
+padding:40px 20px;
+}
+
+.product img{
+width:100%;
+max-width:350px;
+transition:.4s;
+}
+.product img:hover{transform:scale(1.05)}
+
+select,button{
+width:200px;
+padding:10px;
+background:#000;
+color:#fff;
+border:1px solid #fff;
+}
+
+button{
+background:#fff;
+color:#000;
+border:none;
+letter-spacing:2px;
+cursor:pointer;
+transition:.3s;
+}
+button:hover{background:#ccc}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html"><img src="pawi.png"></a>
+<ul>
+<li><a href="tshirt.html">T-SHIRT</a></li>
+<li><a href="pull.html">PULL</a></li>
+<li><a href="veste.html">VESTE</a></li>
+<li><a href="short.html">SHORT</a></li>
+</ul>
+</nav>
+
+<section class="product">
+<img src="pawitshirt.png" alt="PAWI T-Shirt">
+
+<select id="size">
+<option value="">Choisir taille</option>
+<option>S</option>
+<option>M</option>
+<option>L</option>
+<option>XL</option>
+</select>
+
+<button onclick="order()">COMMANDER</button>
+</section>
+
+<script>
+function order(){
+let size=document.getElementById("size").value;
+if(size===""){
+alert("Choisis une taille");
+}else{
+alert("Commande confirmée ✔ Taille "+size);
+}
+}
+</script>
+
+</body>
+</html>
